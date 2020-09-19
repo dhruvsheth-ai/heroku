@@ -71,11 +71,11 @@ fig3 = go.Figure(
 menu = ["Home","Average-Temp","Average-Humidity","Average-Moisture","Geospatial-analysis"]
 
 choice = st.sidebar.selectbox('Menu',menu)
-img = Image.open("/content/top-down-farm.jpg")
+img = Image.open("https://github.com/dhruvsheth-ai/heroku/blob/master/Screenshot_20200912-125546.png")
 
-img2 = Image.open("/content/agri-farm.png")
+img2 = Image.open("https://github.com/dhruvsheth-ai/heroku/blob/master/image_fUhRbpUPET.jpeg")
 
-img3 = Image.open("/content/keplergl.jpeg")
+img3 = Image.open("https://github.com/dhruvsheth-ai/heroku/blob/master/image_0NJXH36TJm.jpeg")
 
 st.sidebar.subheader("Farm plot")
 
