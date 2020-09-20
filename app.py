@@ -120,12 +120,12 @@ if choice == "Home":
   if st.checkbox("Show Notifications for Diseases"):
     st.success("No diseases detected for any plant in array1")
     st.error("Fire Blight detected in array2")
-    st.image(img6, height=1000, width=1000)
+    st.image(img6, height=250, width=250)
     st.error("Cedar Rust detected in array3")
-    st.image(img5, height=1000, width=1000)
+    st.image(img5, height=250, width=250)
     st.success("Apple Tree flowering in Array1")
     st.success("Ripe Apples detected in Array4")
-    st.image(img4, height=1000, width=1000)
+    st.image(img4, height=250, width=250)
     st.warning("Raw Apples detected in Array5")
   if st.checkbox("Show Notifications for Temperature"):
     st.subheader("Normal Temperature = 8C")
