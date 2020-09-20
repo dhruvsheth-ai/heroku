@@ -48,12 +48,7 @@ fig = go.Figure(data=[go.Scatter(
             )
     )])
 
-# 70 - 20, 
- # 75 - 23, 
-  #80 - 25, 
-  #85 - 28, 
-  #90 - 30,
-  #95 - 35
+
 
 fig2 = go.Figure(
     data=[go.Bar(y=[8.45, 7.98, 8.23, 8.98, 9.12, 10.32, 12.43, 13.57, 14.76, 14.57, 13.98, 12.23,
@@ -90,12 +85,31 @@ if choice == 'Average-Temp':
   st.write("................................6am yesterday............................................6am today...................................")
 if choice == 'Average-Moisture':
   st.subheader("This shows the visualisation of the Apple farm starting from Array1 and ending at Array6")
-        
   st.plotly_chart(fig)
+  st.header("Push the below button to activate the watering pump in "n1)
+  if st.button("Activate Pump"):
+    st.write("Watering pump activated. Plants are now being watered!")
+    
+  st.header("Push the below button to deactivate the watering pump in "n1)    
+  if st.button("Deactivate Pump"):
+    st.write("Watering pump deactivated")
+    
+    
+    
 if choice == 'Average-Humidity':
   st.plotly_chart(fig3)
 if choice == 'Geospatial-analysis':
   st.image(img3, height=1000, width=1000)
+  
+  import webbrowser
+
+  url = 'https://kepler.gl/demo/map/carto?mapId=2fd6c7b7-6c63-7397-36dc-96a18bd1b900&owner=dhruvsheth-ai&privateMap=false'
+
+  if st.button('Open browser'):
+    webbrowser.open_new_tab(url)
+    st.write("https://kepler.gl/demo/map/carto?mapId=2fd6c7b7-6c63-7397-36dc-96a18bd1b900&owner=dhruvsheth-ai&privateMap=false")
+    
+    
 if choice == "Home":
   if st.checkbox("Show Notifications for Diseases"):
     st.success("No diseases detected for any plant in array1")
@@ -125,9 +139,9 @@ if choice == "Home":
     st.success("Humidity levels Normal in Array5")
     st.warning("Humidity levels Above Average Threshold in Array6")
   if st.checkbox("Show notifications for Soil Moisture"):
-    st.subheader("Normal Soil Moisture = 70%")
-    st.subheader("Above Average Threshold = 74%")
-    st.subheader("Critically High Soil Moisture = 85%")
+    st.subheader("To manually activate pump, locate to Average-Moisture")
+    st.subheader("Normal Soil Moisture = below 80%")
+    st.subheader("Above Average Threshold = above 80%")
     st.success("Soil Moisture levels Normal in Array1")
     st.success("Soil Moisture levels Normal in Array2")
     st.error("Soil Moisture levels critically high in Array3")
