@@ -86,11 +86,11 @@ if choice == 'Average-Temp':
 if choice == 'Average-Moisture':
   st.subheader("This shows the visualisation of the Apple farm starting from Array1 and ending at Array6")
   st.plotly_chart(fig)
-  st.header("Push the below button to activate the watering pump in "n1)
+  st.header("Push the below button to activate the watering pump in array1")
   if st.button("Activate Pump"):
     st.write("Watering pump activated. Plants are now being watered!")
     
-  st.header("Push the below button to deactivate the watering pump in "n1)    
+  st.header("Push the below button to deactivate the watering pump in array1")    
   if st.button("Deactivate Pump"):
     st.write("Watering pump deactivated")
     
