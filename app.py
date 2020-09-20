@@ -72,11 +72,11 @@ img2 = Image.open("image_fUhRbpUPET.jpeg")
 
 img3 = Image.open("image_0NJXH36TJm.jpeg")
 
-img4 = Image.open("https://hackster.imgix.net/uploads/attachments/1192515/image_fUhRbpUPET.png?auto=compress%2Cformat&w=740&h=555&fit=max")
+img4 = Image.open("apples-detected.jpg")
 
-img5 = Image.open("https://hackster.imgix.net/uploads/attachments/1192520/image_KmpzR9FI3d.png?auto=compress%2Cformat&w=740&h=555&fit=max")
+img5 = Image.open("cedar-detected.jpg")
 
-img6 = Image.open("https://hackster.imgix.net/uploads/attachments/1192521/image_NLixto5FWw.png?auto=compress%2Cformat&w=740&h=555&fit=max")
+img6 = Image.open("fire-blight-detected.jpg")
 
 st.sidebar.subheader("Farm plot")
 
