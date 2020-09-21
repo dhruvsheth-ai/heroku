@@ -62,8 +62,15 @@ fig3 = go.Figure(
     layout_title_text="Average Humididty of all the Arrays starting from 6am ending at 6am the next day"
 )
 
+fig4 =go.Figure(go.Sunburst(
+    labels=["Array1", "Cedar", "Plant1", "Fire-blight", "Plant1", "Ripe-apple", "Plant2", "Raw-apple", "Plant2", "Flowering", "Plant4", "Fresh-plant", "Plant5", "Alternaria", "Plant6", "Plant6", "Fungal"],
+    parents=["", "Array1", "Cedar", "Array1", "Fire-blight", "Array1", "Ripe-apple", "Array1", "Raw-apple", "Array1", "Flowering", "Array1", "Fresh-plant", "Array1", "Alternaria", "Fungal", "Array1" ],
+    values=[10, 16, 6, 12, 6, 20, 6, 12, 6, 10, 6, 24, 6, 10, 6, 6, 8],
+))
+fig.update_layout(margin = dict(t=0, l=0, r=0, b=0))
 
-menu = ["Home","Average-Temp","Average-Humidity","Average-Moisture","Geospatial-analysis"]
+
+menu = ["Home","Diseases","Average-Temp","Average-Humidity","Average-Moisture","Geospatial-analysis"]
 
 choice = st.sidebar.selectbox('Menu',menu)
 img = Image.open("Screenshot_20200912-125546.png")
@@ -85,6 +92,10 @@ st.sidebar.subheader("Farm plot")
 st.sidebar.image(img3, height=250, width=250)
 st.sidebar.image(img, height=250, width=250)
 st.sidebar.image(img2, height=250, width=250)
+if choice == 'Diseases':
+  st.subheader("Distribution of cumulative Object detection plant analysis")
+  st.plotly_chart(fig4)
+
 if choice == 'Average-Temp':
     
   st.plotly_chart(fig2)
